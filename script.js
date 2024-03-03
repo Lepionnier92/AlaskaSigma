@@ -1,6 +1,6 @@
 var admins = {
     "ED574": "jules92",
-    "DH812": "Mineurgab13"
+    "BH812": "Mineurgab13"
 };
 
 // Chargement des cartes sauvegardées dans le localStorage
