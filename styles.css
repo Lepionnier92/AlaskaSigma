@@ -10,7 +10,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("le_pionnier_ALASKA_ff51a9ab-212c-468c-ba50-c2d99bc6e3d9.png"); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
+    background-image: url("image/le_pionnier_ALASKA_ff51a9ab-212c-468c-ba50-c2d99bc6e3d9.png"); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
     background-size: cover;
    /*pointer-events: none; /* Empêcher l'interaction avec l'arrière-plan */
     z-index: -1; /* Placer l'arrière-plan en arrière-plan */
