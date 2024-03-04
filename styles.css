@@ -14,7 +14,7 @@ body {
     background-size:cover;
    /*pointer-events: none; /* Empêcher l'interaction avec l'arrière-plan */
     z-index: -1; /* Placer l'arrière-plan en arrière-plan */
-    animation: moveBackground 30s linear infinite; /* Animation pour déplacer l'arrière-plan */
+    animation: moveBackground 900s infinite; /* Animation pour déplacer l'arrière-plan */
 }
 
 .entete {
@@ -145,7 +145,7 @@ body {
 
 @keyframes moveBackground {
     from { background-position: 0 0; }
-    to { background-position: 100% 0; }
+    to { background-position: 100000% 0; }
 }
 
 .img-heliante {
