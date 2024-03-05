@@ -32,7 +32,9 @@ function afficherCarte(pseudo) {
     carteDiv.className = "carte";
 
     //calculde la largeur en fonction de la largeur du pseudo
-    var largeur = Math.max
+    var largeur = Math.max(88, pseudo.length * 10);
+    carteDiv.style.width = largeur + "px";
+    carteDiv.style.height = "110px";
 
     var img = document.createElement('img');
     img.src = "https://skins.nationsglory.fr/face/" + pseudo + "/3d/20";
