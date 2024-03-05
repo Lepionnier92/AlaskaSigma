@@ -1,5 +1,6 @@
 var admins = {
     "ED574": "jules92",
+    "ed574": "jules92",
     "BH812": "Mineurgab13"
 };
 
@@ -29,6 +30,9 @@ function creerCarte() {
 function afficherCarte(pseudo) {
     var carteDiv = document.createElement('div');
     carteDiv.className = "carte";
+
+    //calculde la largeur en fonction de la largeur du pseudo
+    var largeur = Math.max
 
     var img = document.createElement('img');
     img.src = "https://skins.nationsglory.fr/face/" + pseudo + "/3d/20";
