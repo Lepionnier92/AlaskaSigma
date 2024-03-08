@@ -5,18 +5,18 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position:auto;
+    position: auto;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: url("image/image.png"); /* Remplacez 'votre-image.jpg' par le chemin de votre image */
-    background-size: 100%;
+    background-size: auto;
    /*pointer-events: none; /* Empêcher l'interaction avec l'arrière-plan */
     z-index: -1; /* Placer l'arrière-plan en arrière-plan */
-    animation: moveBackground 900s infinite; /* Animation pour déplacer l'arrière-plan */
-}
+    animation: moveBackground 3900s infinite; /* Animation pour déplacer l'arrière-plan */
 
+}
 .entete {
     font-size: 1rem;
     color: rgb(0, 0, 0);
@@ -145,9 +145,8 @@ body {
 
 @keyframes moveBackground {
     from { background-position: 0 0; }
-    to { background-position: 100000% 0; }
+    to { background-position: 10000% 0; }
 }
-
 .img-heliante {
     width: 74%;
     height: auto;
