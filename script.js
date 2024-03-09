@@ -91,20 +91,26 @@ function supprimerCarte(pseudo) {
 }
 
 // Fonction pour filtrer les cartes en fonction du pseudo saisi dans la barre de recherche
-function filtrerCartes() {
-    var input = document.getElementById('search').value.toLowerCase(); // Récupérer la valeur saisie dans la barre de recherche
-    var cartes = document.querySelectorAll('.carte'); // Sélectionner toutes les cartes
-
-    // Parcourir toutes les cartes et les cacher si leur pseudo ne correspond pas à la recherche
-    cartes.forEach(function(carte) {
-        var pseudo = carte.querySelector('a').innerText.toLowerCase(); // Récupérer le pseudo de la carte
-        if (pseudo.includes(input)) {
-            carte.style.display = 'inline-block'; // Afficher la carte si le pseudo correspond à la recherche
+document.getElementById('search').addEventListener('input', function() {
+    var searchTerm = this.value.toLowerCase();
+    var cartes = document.getElementsByClassName('carte');
+    for (var i = 0; i < cartes.length; i++) {
+        var pseudo = cartes[i].getElementsByTagName('strong')[0].innerText.toLowerCase();
+        if (pseudo.includes(searchTerm)) {
+            cartes[i].classList.remove('hidden');
         } else {
-            carte.style.display = 'none'; // Cacher la carte sinon
+            cartes[i].classList.add('hidden');
         }
-    });
-}
+    }
+});
 
-// Ajouter un écouteur d'événements pour déclencher la fonction filtrerCartes à chaque fois que du texte est saisi dans la barre de recherche
-document.getElementById('search').addEventListener('input', filtrerCartes);
+function carteExisteDeja(pseudo) {
+    var cartes = document.querySelectorAll('.carte');
+    for (var i = 0; i < cartes.length; i++) {
+        var pseudoCarte = cartes[i].querySelector('strong').textContent;
+        if (pseudoCarte === pseudo) {
+            return true;
+        }
+    }
+    return false;
+}
