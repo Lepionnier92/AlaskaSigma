@@ -31,6 +31,11 @@ function afficherCarte(pseudo) {
     var carteDiv = document.createElement('div');
     carteDiv.className = "carte";
 
+    var largeur = Math.max(88, pseudo.length * 10); // Largeur minimale de 88px, chaque caractère ajoute 10px
+
+    carteDiv.style.width = largeur + "px"; // Définition de la largeur
+    carteDiv.style.height = "110px"; // Hauteur fixe
+
     var img = document.createElement('img');
     img.src = "https://skins.nationsglory.fr/face/" + pseudo + "/3d/20";
     img.className = "img-icon";
