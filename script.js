@@ -103,14 +103,3 @@ document.getElementById('search').addEventListener('input', function() {
         }
     }
 });
-
-function carteExisteDeja(pseudo) {
-    var cartes = document.querySelectorAll('.carte');
-    for (var i = 0; i < cartes.length; i++) {
-        var pseudoCarte = cartes[i].querySelector('strong').textContent;
-        if (pseudoCarte === pseudo) {
-            return true;
-        }
-    }
-    return false;
-}
